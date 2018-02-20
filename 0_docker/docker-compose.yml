@@ -1,0 +1,20 @@
+version: "2"
+services:
+  rabbitmq:
+    image:  rabbitmq:management
+    ports:
+      - "5672:5672"
+    restart: always
+
+  mongo:
+    image:  mongo
+    restart: always
+    ports:
+      - "27017:27017"
+
+  consumer:
+    build: consumer
+    links:
+      - rabbitmq
+      - mongo
+    restart: always

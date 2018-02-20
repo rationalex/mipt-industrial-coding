@@ -1,1 +1,0 @@
-# mipt-industrial-coding
