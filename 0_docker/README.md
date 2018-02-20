@@ -7,8 +7,8 @@
 	
 ### build producer
 
-	docker build ./producer -t producer
+	(sudo) docker build ./producer -t producer
 
 ### start producer
 
-	docker run -it --rm --network=0docker_default producer
+	(sudo) docker run -it --rm --network=0docker_default producer
